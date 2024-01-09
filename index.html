@@ -6,16 +6,23 @@
   <title>WebView Test</title>
 </head>
 <body>
-  <h1>WebView Test Page</h1>
-  <small>v2</small>
+  <div>
+    <h1>WebView Test Page</h1><br>
+    <small>v2</small>
+  </div>
   
   <button id="postMessageButton" onclick="postMessages()">Post Messages</button>
   <button id="postMessageButtonRN" onclick="postMessagesRN()">RN Post Messages</button>
 
   <script>
+    const data = {
+      message: "This is test message from web message event",
+      success: true,
+      arrayData: [1,2,3,4,5]
+    }
     function postMessages() {
       // Using window.postMessage(data) for general web communication
-      window.postMessage('Message from window.postMessage');
+      window.postMessage(data);
     }
 
     function postMessagesRN() {
@@ -23,7 +30,7 @@
       if (window.ReactNativeWebView) {
         window.ReactNativeWebView.postMessage('Message from window.ReactNativeWebView.postMessage');
       } else {
-        console.error('window.ReactNativeWebView is not defined');
+        console.error(data);
       }
     }
   </script>
