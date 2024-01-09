@@ -68,9 +68,12 @@
 
   <script>
     const data = JSON.stringify({
-      message: "This is a test message from web message event",
-      success: true,
-      arrayData: [1,2,3,4,5]
+      action: 'test',
+      payload: {
+        message: "This is a test message from web message event",
+        success: true,
+        arrayData: [1,2,3,4,5]
+      }
     })
     
     function postMessages() {
