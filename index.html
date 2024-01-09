@@ -7,18 +7,24 @@
 </head>
 <body>
   <h1>WebView Test Page</h1>
+  <small>v2</small>
   
   <button id="postMessageButton" onclick="postMessages()">Post Messages</button>
-  <button id="postMessageButton" onclick="postMessagesRN()">RN Post Messages</button>
+  <button id="postMessageButtonRN" onclick="postMessagesRN()">RN Post Messages</button>
 
   <script>
     function postMessages() {
       // Using window.postMessage(data) for general web communication
       window.postMessage('Message from window.postMessage');
     }
+
     function postMessagesRN() {
       // Using window.ReactNativeWebView.postMessage(data) for communication with React Native
-      window.ReactNativeWebView.postMessage('Message from window.ReactNativeWebView.postMessage');
+      if (window.ReactNativeWebView) {
+        window.ReactNativeWebView.postMessage('Message from window.ReactNativeWebView.postMessage');
+      } else {
+        console.error('window.ReactNativeWebView is not defined');
+      }
     }
   </script>
 </body>
