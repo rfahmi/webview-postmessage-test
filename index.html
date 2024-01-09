@@ -4,10 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebView Test</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    div {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    small {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div>
-    <h1>WebView Test Page</h1><br>
+    <h1>WebView Test Page</h1>
     <small>v2</small>
   </div>
   
@@ -16,7 +57,7 @@
 
   <script>
     const data = {
-      message: "This is test message from web message event",
+      message: "This is a test message from web message event",
       success: true,
       arrayData: [1,2,3,4,5]
     }
