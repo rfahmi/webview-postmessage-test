@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebView Test</title>
+</head>
+<body>
+  <h1>WebView Test Page</h1>
+  
+  <button id="postMessageButton" onclick="postMessages()">Post Messages</button>
+  <button id="postMessageButton" onclick="postMessagesRN()">RN Post Messages</button>
+
+  <script>
+    function postMessages() {
+      // Using window.postMessage(data) for general web communication
+      window.postMessage('Message from window.postMessage');
+    }
+    function postMessagesRN() {
+      // Using window.ReactNativeWebView.postMessage(data) for communication with React Native
+      window.ReactNativeWebView.postMessage('Message from window.ReactNativeWebView.postMessage');
+    }
+  </script>
+</body>
+</html>
