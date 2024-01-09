@@ -18,6 +18,9 @@
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 80%;
+      margin: 20px auto;
+      border-radius: 10px;
     }
 
     h1 {
@@ -56,11 +59,12 @@
   <button id="postMessageButtonRN" onclick="postMessagesRN()">RN Post Messages</button>
 
   <script>
-    const data = {
+    const data = JSON.stringify({
       message: "This is a test message from web message event",
       success: true,
       arrayData: [1,2,3,4,5]
-    }
+    })
+    
     function postMessages() {
       // Using window.postMessage(data) for general web communication
       window.postMessage(data);
