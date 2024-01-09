@@ -69,9 +69,9 @@
     function postMessagesRN() {
       // Using window.ReactNativeWebView.postMessage(data) for communication with React Native
       if (window.ReactNativeWebView) {
-        window.ReactNativeWebView.postMessage('Message from window.ReactNativeWebView.postMessage');
+        window.ReactNativeWebView.postMessage(data);
       } else {
-        console.error(data);
+        console.error('post react native error');
       }
     }
   </script>
